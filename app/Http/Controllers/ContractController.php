@@ -22,9 +22,9 @@ class ContractController extends Controller
 	public function show()
 	{
 
-		$contracts = ContractModel::all();
+		$users = ContractModel::all();
 		
-		return view('contract.show', ['contracts' => $contracts]);
+		return view('contract.show', ['users' => $users]);
 	}
 
 }
