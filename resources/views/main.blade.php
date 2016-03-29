@@ -26,26 +26,26 @@
 	  <ul class="nav">
 	    <li  class="dropdown" id="profile-messages" ><a title="" href="#" data-toggle="dropdown" data-target="#profile-messages" class="dropdown-toggle"><i class="icon icon-user"></i>  <span class="text">Welcome User</span><b class="caret"></b></a>
 	      <ul class="dropdown-menu">
-	        <li><a href="#"><i class="icon-user"></i> My Profile</a></li>
+	        <li><a href="#"><i class="icon-user"></i>设置</a></li>
 	        <li class="divider"></li>
-	        <li><a href="#"><i class="icon-check"></i> My Tasks</a></li>
+	        <li><a href="#"><i class="icon-check"></i>任务</a></li>
 	        <li class="divider"></li>
-	        <li><a href="login.html"><i class="icon-key"></i> Log Out</a></li>
+	        <li><a href="login.html"><i class="icon-key"></i>退出</a></li>
 	      </ul>
 	    </li>
-	    <li class="dropdown" id="menu-messages"><a href="#" data-toggle="dropdown" data-target="#menu-messages" class="dropdown-toggle"><i class="icon icon-envelope"></i> <span class="text">Messages</span> <span class="label label-important">5</span> <b class="caret"></b></a>
+	    <li class="dropdown" id="menu-messages"><a href="#" data-toggle="dropdown" data-target="#menu-messages" class="dropdown-toggle"><i class="icon icon-envelope"></i> <span class="text">消息</span> <span class="label label-important">5</span> <b class="caret"></b></a>
 	      <ul class="dropdown-menu">
-	        <li><a class="sAdd" title="" href="#"><i class="icon-plus"></i> new message</a></li>
+	        <li><a class="sAdd" title="" href="#"><i class="icon-plus"></i>新消息</a></li>
 	        <li class="divider"></li>
-	        <li><a class="sInbox" title="" href="#"><i class="icon-envelope"></i> inbox</a></li>
+	        <li><a class="sInbox" title="" href="#"><i class="icon-envelope"></i>收件箱</a></li>
 	        <li class="divider"></li>
-	        <li><a class="sOutbox" title="" href="#"><i class="icon-arrow-up"></i> outbox</a></li>
+	        <li><a class="sOutbox" title="" href="#"><i class="icon-arrow-up"></i>发件箱</a></li>
 	        <li class="divider"></li>
-	        <li><a class="sTrash" title="" href="#"><i class="icon-trash"></i> trash</a></li>
+	        <li><a class="sTrash" title="" href="#"><i class="icon-trash"></i>回收站</a></li>
 	      </ul>
 	    </li>
-	    <li class=""><a title="" href="#"><i class="icon icon-cog"></i> <span class="text">Settings</span></a></li>
-	    <li class=""><a title="" href="login.html"><i class="icon icon-share-alt"></i> <span class="text">Logout</span></a></li>
+	    <li class=""><a title="" href="#"><i class="icon icon-cog"></i> <span class="text">设置</span></a></li>
+	    <li class=""><a title="" href="login.html"><i class="icon icon-share-alt"></i> <span class="text">退出</span></a></li>
 	  </ul>
 	</div>
 	<!--close-top-Header-menu-->
@@ -53,45 +53,74 @@
 
 	<!--start-top-serch-->
 	<div id="search">
-	  <input type="text" placeholder="Search here..."/>
+	  <input type="text" placeholder="搜索..."/>
 	  <button type="submit" class="tip-bottom" title="Search"><i class="icon-search icon-white"></i></button>
 	</div>
 	<!--close-top-serch-->	
 
 	<!--sidebar-menu-->
-	<div id="sidebar"><a href="#" class="visible-phone"><i class="icon icon-home"></i> Dashboard</a>
+	<div id="sidebar"><a href="#" class="visible-phone"><i class="icon icon-home"></i>公告栏</a>
 	  <ul>
-	    <li class="active"><a href="index.html"><i class="icon icon-home"></i> <span>Dashboard</span></a> </li>
-	    <li> <a href="charts.html"><i class="icon icon-signal"></i> <span>Charts &amp; graphs</span></a> </li>
-	    <li> <a href="widgets.html"><i class="icon icon-inbox"></i> <span>Widgets</span></a> </li>
-	    <li><a href="tables.html"><i class="icon icon-th"></i> <span>Tables</span></a></li>
-	    <li><a href="grid.html"><i class="icon icon-fullscreen"></i> <span>Full width</span></a></li>
-	    <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>Forms</span> <span class="label label-important">3</span></a>
+	    <li class="active"><a href="index.html"><i class="icon icon-home"></i> <span>公告栏</span></a> </li>
+
+	    <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>合同管理</span> <span class="label label-important">3</span></a>
 	      <ul>
-	        <li><a href="form-common.html">Basic Form</a></li>
-	        <li><a href="form-validation.html">Form with Validation</a></li>
-	        <li><a href="form-wizard.html">Form with Wizard</a></li>
+	        <li><a href="form-common.html">查询合同</a></li>
+	        <li><a href="form-validation.html">新增合同</a></li>
+	        <li><a href="form-validation.html">修改合同</a></li>
 	      </ul>
 	    </li>
-	    <li><a href="buttons.html"><i class="icon icon-tint"></i> <span>Buttons &amp; icons</span></a></li>
-	    <li><a href="interface.html"><i class="icon icon-pencil"></i> <span>Eelements</span></a></li>
-	    <li class="submenu"> <a href="#"><i class="icon icon-file"></i> <span>Addons</span> <span class="label label-important">5</span></a>
+
+	    <li class="submenu"> <a href="#"><i class="icon icon-signal"></i> <span>提成管理</span> <span class="label label-important">3</span></a>
 	      <ul>
-	        <li><a href="index2.html">Dashboard2</a></li>
-	        <li><a href="gallery.html">Gallery</a></li>
-	        <li><a href="calendar.html">Calendar</a></li>
-	        <li><a href="invoice.html">Invoice</a></li>
-	        <li><a href="chat.html">Chat option</a></li>
+	        <li><a href="form-common.html">查询提成</a></li>
+	        <li><a href="form-validation.html">提成申请</a></li>
+	        <li><a href="form-validation.html">修改申请</a></li>
 	      </ul>
 	    </li>
-	    <li class="submenu"> <a href="#"><i class="icon icon-info-sign"></i> <span>Error</span> <span class="label label-important">4</span></a>
+
+	    <li class="submenu"> <a href="#"><i class="icon icon-file"></i> <span>客户单位管理</span> <span class="label label-important">5</span></a>
 	      <ul>
-	        <li><a href="error403.html">Error 403</a></li>
-	        <li><a href="error404.html">Error 404</a></li>
-	        <li><a href="error405.html">Error 405</a></li>
-	        <li><a href="error500.html">Error 500</a></li>
+	        <li><a href="index2.html">查询客户</a></li>
+	        <li><a href="gallery.html">新增客户</a></li>
+	        <li><a href="calendar.html">修改信息</a></li>
 	      </ul>
 	    </li>
+
+	    <li class="submenu"> <a href="#"><i class="icon icon-tint"></i> <span>客户联系人管理</span> <span class="label label-important">5</span></a>
+	      <ul>
+	        <li><a href="index2.html">查询联系人</a></li>
+	        <li><a href="gallery.html">新增联系人</a></li>
+	        <li><a href="calendar.html">修改联系人</a></li>
+	      </ul>
+	    </li>
+
+	    <li class="submenu"> <a href="#"><i class="icon icon-info-sign"></i> <span>用户管理</span> <span class="label label-important">4</span></a>
+	      <ul>
+	        <li><a href="error403.html">查询用户</a></li>
+	        <li><a href="error404.html">新增用户</a></li>
+	        <li><a href="error405.html">修改用户</a></li>
+	      </ul>
+	    </li>
+
+	    <li class="submenu"> <a href="#"><i class="icon icon-info-sign"></i> <span>角色管理</span> <span class="label label-important">4</span></a>
+	      <ul>
+	        <li><a href="error403.html">查询角色</a></li>
+	        <li><a href="error404.html">新增角色</a></li>
+	        <li><a href="error405.html">修改角色</a></li>
+	        <li><a href="error405.html">用户<->角色</a></li>
+	      </ul>
+	    </li>
+
+	    <li class="submenu"> <a href="#"><i class="icon icon-info-sign"></i> <span>组管理</span> <span class="label label-important">4</span></a>
+	      <ul>
+	        <li><a href="error403.html">查询组</a></li>
+	        <li><a href="error404.html">新增组</a></li>
+	        <li><a href="error405.html">修改组</a></li>
+	        <li><a href="error405.html">用户<->组</a></li>
+	      </ul>
+	    </li>
+
 	  </ul>
 	</div>
 	<!--sidebar-menu-->
