@@ -21,7 +21,6 @@
                   </div>
                   <div class="widget-content nopadding">
                     <form action="{{ url('/contractlist') }}" method="post" class="form-horizontal">
-                       
                       <div class="control-group">
                         <label class="control-label">合同编号</label>
                         <div class="controls">
@@ -41,10 +40,11 @@
                   </div>
                 </div>
 
-                <!-- 显示合同列表... -->
+
+                <!-- 显示查询结果... -->
                 <div class="widget-box">
                     <div class="widget-title"> <span class="icon"><i class="icon-th"></i></span>
-                    <h5>合同列表</h5>
+                    <h5>查询结果</h5>
                     </div>
                     <div class="widget-content nopadding">
                         <table class="table table-bordered data-table">

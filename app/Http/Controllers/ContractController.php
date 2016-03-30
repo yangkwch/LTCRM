@@ -35,6 +35,20 @@ class ContractController extends Controller
 		return view('contract.query', ['contracts' => $contracts]);
 	}
 
+	public function list(Request $request)
+	{
+		if($request->input('contractnumber'))
+		{
+			$contractnumber = $request->input('contractnumber');
+	    	$contracts = ContractModel::where('contractnumber',$contractnumber)->get();
+		}
+	    else
+	    	$contracts = ContractModel::all();
+
+	
+		return view('contract.list', ['contracts' => $contracts]);
+	}
+
 	public function create()
 	{
 
