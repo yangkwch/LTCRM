@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>LT CONTRACT MANAGEMENT PLATFORM</title>
+	<title>朗天通讯合同管理平台</title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -61,13 +61,13 @@
 	<!--sidebar-menu-->
 	<div id="sidebar"><a href="#" class="visible-phone"><i class="icon icon-home"></i>公告栏</a>
 	  <ul>
-	    <li class="active"><a href="index.html"><i class="icon icon-home"></i> <span>公告栏</span></a> </li>
+	    <li class="active"><a href="{{ url('/') }}"><i class="icon icon-home"></i> <span>公告栏</span></a> </li>
 
 	    <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>合同管理</span> <span class="label label-important">3</span></a>
 	      <ul>
-	        <li><a href="form-common.html">查询合同</a></li>
-	        <li><a href="form-validation.html">新增合同</a></li>
-	        <li><a href="form-validation.html">修改合同</a></li>
+	        <li><a href="{{ url('/contractquery') }}">查询合同</a></li>
+	        <li><a href="{{ url('/contractcreate') }}">新增合同</a></li>
+	        <li><a href="{{ url('/contractedit') }}">修改合同</a></li>
 	      </ul>
 	    </li>
 
@@ -128,17 +128,8 @@
 
 	<!--main-container-part-->
 	<div id="content">
-		<!--breadcrumbs-->
-		<div id="content-header">
-			<div id="breadcrumb"> <a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a></div>
-		</div>
-		<!--End-breadcrumbs-->
 
-		<!--Action boxes-->
-		<div class="container-fluid">
 		@yield('content')
-		</div>
-		<!--End-Action boxes-->   
 	</div>
 	<!--end-main-container-part-->
 

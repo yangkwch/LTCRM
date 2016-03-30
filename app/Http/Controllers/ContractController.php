@@ -19,12 +19,35 @@ class ContractController extends Controller
 		$contract->save();
 	}
 
-	public function show()
+	public function dashboard()
 	{
 
-		$users = ContractModel::all();
+		$contracts = ContractModel::all();
 		
-		return view('contract.show', ['users' => $users]);
+		return view('dashboard');
 	}
 
+	public function query()
+	{
+
+		$contracts = ContractModel::all();
+		
+		return view('contract.query', ['contracts' => $contracts]);
+	}
+
+	public function create()
+	{
+
+		$contracts = ContractModel::all();
+		
+		return view('contract.create', ['contracts' => $contracts]);
+	}
+
+	public function edit()
+	{
+
+		$contracts = ContractModel::all();
+		
+		return view('contract.edit', ['contracts' => $contracts]);
+	}
 }
