@@ -35,21 +35,23 @@ class ContractController extends Controller
 		return view('contract.query', ['contracts' => $contracts]);
 	}
 
-	public function list(Request $request)
+	public function querycommit(Request $request)
 	{
 		if($request->input('contractnumber'))
 		{
 			$contractnumber = $request->input('contractnumber');
-	    	$contracts = ContractModel::where('contractnumber',$contractnumber)->get();
-		}
+			$contractname = $request->input('contractname');
+			
+	    	$contracts = ContractModel::where('contractname','like', '%'.$contractname.'%')->where(function($query){$query->where('contractnumber','like', '%'.$contractnumber.'%');})->get();
+	    }
 	    else
 	    	$contracts = ContractModel::all();
 
 	
-		return view('contract.list', ['contracts' => $contracts]);
+		return view('contract.querycommit', ['contracts' => $contracts]);
 	}
 
-	public function create()
+	public function create(Request $request)
 	{
 
 		$contracts = ContractModel::all();
@@ -57,7 +59,7 @@ class ContractController extends Controller
 		return view('contract.create', ['contracts' => $contracts]);
 	}
 
-	public function edit()
+	public function edit(Request $request)
 	{
 
 		$contracts = ContractModel::all();

@@ -20,7 +20,7 @@
                     <h5>查询条件</h5>
                   </div>
                   <div class="widget-content nopadding">
-                    <form action="{{ url('/contractlist') }}" method="post" class="form-horizontal">
+                    <form action="{{ url('/contractquerycommit') }}" method="post" class="form-horizontal">
                        
                       <div class="control-group">
                         <label class="control-label">合同编号</label>
