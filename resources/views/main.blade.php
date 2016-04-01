@@ -6,11 +6,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
 	<link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
+	<link rel="stylesheet" href="css/uniform.css" />
+	<link rel="stylesheet" href="css/select2.css" />
 	<link rel="stylesheet" href="css/fullcalendar.css" />
 	<link rel="stylesheet" href="css/matrix-style.css" />
 	<link rel="stylesheet" href="css/matrix-media.css" />
 	<link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
 	<link rel="stylesheet" href="css/jquery.gritter.css" />
+	<link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
 	<link href='http://fonts.useso.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -63,15 +66,15 @@
 	  	<ul>
 	    <li class="active"><a href="{{ url('/') }}"><i class="icon icon-home"></i> <span>公告栏</span></a> </li>
 
-	    <li class="submenu"> <a href="#"><i class="icon icon-file"></i> <span>客户单位管理</span> <span class="label label-important">5</span></a>
+	    <li class="submenu"> <a href="#"><i class="icon icon-file"></i> <span>客户单位管理</span></a>
 	      	<ul>
-	        	<li><a href="#">查询客户单位</a></li>
+	        	<li><a href="{{ url('/customerquery') }}">查询客户单位</a></li>
 	        	<li><a href="#">新增客户单位</a></li>
 	        	<li><a href="c#">修改信息</a></li>
 	      	</ul>
 	    </li>
 
-	    <li class="submenu"> <a href="#"><i class="icon icon-tint"></i> <span>客户联系人管理</span> <span class="label label-important">5</span></a>
+	    <li class="submenu"> <a href="#"><i class="icon icon-tint"></i> <span>客户联系人管理</span></a>
 	      	<ul>
 	        	<li><a href="#">查询联系人</a></li>
 	        	<li><a href="#">新增联系人</a></li>
@@ -79,7 +82,7 @@
 	      	</ul>
 	    </li>
 
-	    <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>合同管理</span> <span class="label label-important">3</span></a>
+	    <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>合同管理</span></a>
 	      	<ul>
 	        	<li><a href="{{ url('/contractquery') }}">查询合同</a></li>
 	        	<li><a href="{{ url('/contractcreate') }}">新增合同</a></li>
@@ -88,19 +91,14 @@
 	      	</ul>
 	    </li>
 
-	    <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>回款管理</span> <span class="label label-important">3</span></a>
+	    <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>回款管理</span></a>
 	      	<ul>
 	        	<li><a href="#">查询回款记录</a></li>
 	        	<li><a href="#">新增回款记录</a></li>
 	      	</ul>
 	    </li>
 
-	    <li class="submenu"> 
-		    <a href="#">
-			    <i class="icon icon-signal"></i> 
-			    <span>提成管理</span> 
-			    <span class="label label-important">3</span>
-		    </a>
+	    <li class="submenu"> <a href="#"> <i class="icon icon-signal"></i> <span>提成管理</span></a>
 	      	<ul>
 	        	<li><a href="#">查询提成</a></li>
 	        	<li><a href="#">提成申请</a></li>
@@ -108,7 +106,7 @@
 	      	</ul>
 	    </li>
 
-	    <li class="submenu"> <a href="#"><i class="icon icon-info-sign"></i> <span>用户管理</span> <span class="label label-important">4</span></a>
+	    <li class="submenu"> <a href="#"><i class="icon icon-info-sign"></i> <span>用户管理</span></a>
 	      	<ul>
 	        	<li><a href="#">查询用户</a></li>
 	        	<li><a href="#">新增用户</a></li>
@@ -116,7 +114,7 @@
 	      	</ul>
 	    </li>
 
-	    <li class="submenu"> <a href="#"><i class="icon icon-info-sign"></i> <span>角色管理</span> <span class="label label-important">4</span></a>
+	    <li class="submenu"> <a href="#"><i class="icon icon-info-sign"></i> <span>角色管理</span></a>
 	      	<ul>
 		        <li><a href="#">查询角色</a></li>
 		        <li><a href="#">新增角色</a></li>
@@ -125,7 +123,7 @@
 	      	</ul>
 	    </li>
 
-	    <li class="submenu"> <a href="#"><i class="icon icon-info-sign"></i> <span>组管理</span> <span class="label label-important">4</span></a>
+	    <li class="submenu"> <a href="#"><i class="icon icon-info-sign"></i> <span>组管理</span></a>
 	      	<ul>
 		        <li><a href="#">查询组</a></li>
 		        <li><a href="#">新增组</a></li>
@@ -153,28 +151,37 @@
 	</div>
 
 	<!--end-Footer-part-->
-
-	<script src="js/excanvas.min.js"></script> 
 	<script src="js/jquery.min.js"></script> 
 	<script src="js/jquery.ui.custom.js"></script> 
 	<script src="js/bootstrap.min.js"></script> 
-	<script src="js/jquery.flot.min.js"></script> 
-	<script src="js/jquery.flot.resize.min.js"></script> 
-	<script src="js/jquery.peity.min.js"></script> 
-	<script src="js/fullcalendar.min.js"></script> 
-	<script src="js/matrix.js"></script> 
-	<script src="js/matrix.dashboard.js"></script> 
-	<script src="js/jquery.gritter.min.js"></script> 
-	<script src="js/matrix.interface.js"></script> 
-	<script src="js/matrix.chat.js"></script> 
-	<script src="js/jquery.validate.js"></script> 
-	<script src="js/matrix.form_validation.js"></script> 
-	<script src="js/jquery.wizard.js"></script> 
 	<script src="js/jquery.uniform.js"></script> 
 	<script src="js/select2.min.js"></script> 
-	<script src="js/matrix.popover.js"></script> 
 	<script src="js/jquery.dataTables.min.js"></script> 
-	<script src="js/matrix.tables.js"></script> 
+	<script src="js/matrix.js"></script> 
+	<script src="js/matrix.tables.js"></script>
+
+
+
+ 	<script src="js/jquery.flot.min.js"></script> 
+	<script src="js/jquery.flot.resize.min.js"></script> 
+	<script src="js/jquery.peity.min.js"></script> 
+	<script src="js/jquery.gritter.min.js"></script> 
+ 	<script src="js/jquery.validate.js"></script> 
+	<script src="js/jquery.wizard.js"></script> 
+
+
+
+	<script src="js/matrix.dashboard.js"></script>
+	<script src="js/matrix.interface.js"></script> 
+	<script src="js/matrix.chat.js"></script>
+	<script src="js/matrix.form_validation.js"></script> 
+	<script src="js/matrix.popover.js"></script>	
+
+
+	<script src="js/excanvas.min.js"></script> 
+
+	<script src="js/fullcalendar.min.js"></script> 	
+
 
 	<script type="text/javascript">
 	  	// This function is called from the pop-up menus to transfer to
